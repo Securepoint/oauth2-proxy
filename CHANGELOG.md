@@ -10,6 +10,7 @@
 
 - [#2539](https://github.com/oauth2-proxy/oauth2-proxy/pull/2539) pkg/http: Fix leaky test (@isodude)
 - [#2601](https://github.com/oauth2-proxy/oauth2-proxy/pull/2601) keycloak: add token refresh (@Primexz)
+- [#2605](https://github.com/oauth2-proxy/oauth2-proxy/pull/2605) Fix: Show login page on broken cookie (@Primexz)
 
 # V7.6.0
 
