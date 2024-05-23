@@ -9,6 +9,9 @@
 ## Changes since v7.6.0
 
 - [#2539](https://github.com/oauth2-proxy/oauth2-proxy/pull/2539) pkg/http: Fix leaky test (@isodude)
+- [#2601](https://github.com/oauth2-proxy/oauth2-proxy/pull/2601) keycloak: add token refresh (@Primexz)
+- [#2605](https://github.com/oauth2-proxy/oauth2-proxy/pull/2605) Fix: Show login page on broken cookie (@Primexz)
+- [#2607](https://github.com/oauth2-proxy/oauth2-proxy/pull/2607) Fix(csrf): fix possible infinite loop (@Primexz)
 
 # V7.6.0
 
