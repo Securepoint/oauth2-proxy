@@ -1,4 +1,4 @@
 package main
 
-// VERSION contains version information
-var VERSION = "undefined"
+// version contains version information
+var version = "undefined"

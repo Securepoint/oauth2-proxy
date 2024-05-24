@@ -1,0 +1,11 @@
+project_name: oauth2-proxy
+builds:
+- env:
+  - CGO_ENABLED=0
+  binary: oauth2-proxy
+  goos:
+  - linux
+  - darwin
+  goarch:
+  - amd64
+  - arm64

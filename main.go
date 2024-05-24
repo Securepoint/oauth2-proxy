@@ -28,7 +28,7 @@ func main() {
 	configFlagSet.Parse(os.Args[1:])
 
 	if *showVersion {
-		fmt.Printf("oauth2-proxy %s (built with %s)\n", VERSION, runtime.Version())
+		fmt.Printf("oauth2-proxy %s (built with %s)\n", version, runtime.Version())
 		return
 	}
 

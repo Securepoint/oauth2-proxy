@@ -142,7 +142,7 @@ func NewOAuthProxy(opts *options.Options, validator func(string) bool) (*OAuthPr
 		CustomLogo:       opts.Templates.CustomLogo,
 		ProxyPrefix:      opts.ProxyPrefix,
 		Footer:           opts.Templates.Footer,
-		Version:          VERSION,
+		Version:          version,
 		Debug:            opts.Templates.Debug,
 		ProviderName:     buildProviderName(provider, opts.Providers[0].Name),
 		SignInMessage:    buildSignInMessage(opts),
