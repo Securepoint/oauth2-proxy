@@ -9,3 +9,10 @@ builds:
   goarch:
   - amd64
   - arm64
+nfpms:
+  # note that this is an array of nfpm configs
+  -
+   vendor: Securepoint GmbH
+   file_name_template: "{{ .PackageName }}_{{ .Os }}_{{ .Arch }}"
+   formats:
+    - deb
