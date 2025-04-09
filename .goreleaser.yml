@@ -16,3 +16,7 @@ nfpms:
    file_name_template: "{{ .PackageName }}_{{ .Os }}_{{ .Arch }}"
    formats:
     - deb
+dockers:
+  - image_templates:
+      - ghcr.io/securepoint/oauth2-proxy:latest
+      - ghcr.io/securepoint/oauth2-proxy:{{ .Tag }}
