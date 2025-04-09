@@ -10,7 +10,7 @@ import (
 	"github.com/oauth2-proxy/oauth2-proxy/v7/pkg/apis/options"
 	"github.com/oauth2-proxy/oauth2-proxy/v7/pkg/apis/sessions"
 	"github.com/oauth2-proxy/oauth2-proxy/v7/pkg/encryption"
-	. "github.com/onsi/ginkgo"
+	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"
 )
 
@@ -159,10 +159,10 @@ var _ = Describe("CSRF Cookie with non-fixed name Tests", func() {
 				))
 				Expect(rw.Header().Get("Set-Cookie")).To(ContainSubstring(
 					fmt.Sprintf(
-						"; Path=%s; Domain=%s; Expires=%s; HttpOnly; Secure",
+						"; Path=%s; Domain=%s; Max-Age=%d; HttpOnly; Secure",
 						cookiePath,
 						cookieDomain,
-						testCookieExpires(testNow.Add(cookieOpts.CSRFExpire)),
+						int(cookieOpts.CSRFExpire.Seconds()),
 					),
 				))
 			})
@@ -176,11 +176,10 @@ var _ = Describe("CSRF Cookie with non-fixed name Tests", func() {
 
 				Expect(rw.Header().Get("Set-Cookie")).To(Equal(
 					fmt.Sprintf(
-						"%s=; Path=%s; Domain=%s; Expires=%s; HttpOnly; Secure",
+						"%s=; Path=%s; Domain=%s; Max-Age=0; HttpOnly; Secure",
 						privateCSRF.cookieName(),
 						cookiePath,
 						cookieDomain,
-						testCookieExpires(testNow.Add(time.Hour*-1)),
 					),
 				))
 			})
